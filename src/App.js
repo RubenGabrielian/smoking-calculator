@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import Calculator from './components/Calculator'
+import Header from './components/Header'
+import "antd/dist/antd.css"
+
+const StyledApp = styled.div`
+  background-color: #e5e5e5;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+`
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <div>
+        <Header />
+        <Calculator />
+      </div>
+    </StyledApp>
   );
 }
 

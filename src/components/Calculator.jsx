@@ -45,7 +45,6 @@ const Calculator = () => {
     const [years, setYears] = useState(0);
     const [cigarettes, setSigarettes] = useState(0);
     const [howMuch, setHowMuch] = useState(0);
-    const [pack, setPack] = useState(0);
     const [fullMoney, setFullMoney] = useState(0);
 
     const calculate = () => {
@@ -86,7 +85,7 @@ const Calculator = () => {
                             fullMoney > 0 ?
                                 <div>
                                     <h2 className="total">You already spend ${fullMoney}</h2>
-                                    <img class="sad-man" src={process.env.PUBLIC_URL + '/sad.png'} />
+                                    <img alt="sad man" class="sad-man" src={process.env.PUBLIC_URL + '/sad.png'} />
                                 </div>
                                 : ""
                         }
